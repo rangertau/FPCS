@@ -1,6 +1,17 @@
 import cv2
 from ultralytics import YOLO
 from datetime import datetime
+import sys
+
+# Retrieve arguments passed to the program
+if len(sys.argv) > 1:
+    print("Arguments received:", sys.argv[1:])
+else:
+    print("No arguments were provided.")
+
+
+
+
 
 model = YOLO("/home/rangertau/Documents/CNN/Weights/FPCS-greyscale-merged-v1.pt", verbose=True)
 
